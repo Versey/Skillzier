@@ -1,0 +1,10 @@
+#navbar{
+    background: #34568b;
+    width: 100%;
+    height: 50px;
+}
+
+.main-avatar{
+    float: right;
+    margin:5px;
+}
