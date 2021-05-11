@@ -1,12 +1,10 @@
 .card{
-    background:#F6F6F6;
-    max-width: 20rem;
     margin:2rem;
-    border-radius: 9px;
+    max-width: 400px;
 }
 
-.card-container{
-    padding:1rem;
+.card-content{
+    text-align: left;
 }
 
 .card-toolbar{
@@ -18,23 +16,18 @@
 }
 
 .card-header{
-    background:#D4D4D4;
-    min-height:4rem;
-    padding:.4rem;
-    font-size: 25px;
-    font-weight: 700;
+    color:#707070;
 }
 
 .card-description{
     font-size: 1rem;
     color:#707070;
+    justify-content: left;
 }
 
 .card-description h4{
-    padding:0px;
-    margin:0;
-    font-size: 1.5rem;
-    color:#707070;
+    color:black;
+    text-align: left;
 
 }
 
@@ -42,4 +35,8 @@
     font-size: 1.5rem;
     font-weight: 700;
     color:#707070;
+}
+
+.MuiCardActions-root{
+    justify-content: center;
 }

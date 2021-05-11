@@ -2,7 +2,9 @@ import './App.css';
 
 import React from 'react';
 import MyNavbar from './Components/Common/MyNavbar/MyNavbar'
-import MyCard from './Components/MyCard/MyCard'
+import MyCard from './Components/Common/MyCard/MyCard'
+import CardList from './Components/Common/CardList/CardList'
+
 
 const App = () => 
 {
@@ -11,17 +13,11 @@ const App = () =>
       <MyNavbar></MyNavbar>
 
       <div id="header">
-
-        <div className="ranking">
-
-        </div>
       </div>
 
       <div id='main-container'> 
-
           <div className="card-list">
-
-
+            <CardList></CardList>
           </div>
 
         </div>

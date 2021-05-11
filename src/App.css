@@ -12,20 +12,16 @@
 {
   margin: auto;
   min-height: 100vh;
-  background-color: lightgrey;
-  margin-left: 300px;
-  margin-right: 300px;
 }
 
-.card-list{
-  background: darkgray;
-  margin: auto;
-  display: flex;
+.card-list
+{
+  margin: 0 10em 0 10em;
+  background-color: grey;
 
 }
 
 .ranking{
-  background: grey;
   height:600px;
   width:600px;
   margin: auto;
