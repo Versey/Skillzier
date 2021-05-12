@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import store from './store'
+
+const unsubscribe = store.subscribe(() =>
+  console.log('State after dispatch: ', store.getState())
+)
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,32 +1,29 @@
 import Grid from '@material-ui/core/Grid';
-import { SdCardSharp } from '@material-ui/icons';
+
 import { useState } from 'react';
 import MyCard from '../MyCard/MyCard'
 
-const CardList = props =>
+const CardList = (id,...props) =>
 {
-    const [cards,setCards] = useState([
-    {
-        title: "Hello",
-        content: "Ayy",
-        points: 200
-    },
-]);
 
+    const [cards, setState] = useState([]);
+    
     return(
         <div className="card-list">
-
         <Grid container>
             <Grid item xs={12}>
                 <Grid container justify="center">
-                {cards.map(card => <MyCard title="Hello"/>)}
+
+                {cards.map(card => 
+                <MyCard key ={card.id} {...card}/>)}
+
                 </Grid>
             </Grid>
         </Grid>
 
         </div>
 
-);
+    );
 
 }
 

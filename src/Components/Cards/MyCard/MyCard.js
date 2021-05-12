@@ -1,5 +1,7 @@
 import './MyCard.css'
 
+import {useDispatch } from 'react-redux'
+
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -9,9 +11,12 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const MyCard = props=>
 {
+    const dispatch = useDispatch()
+
+    const onDelete = () => dispatch({ type: 'cards/cardRemoved', payload: props.id })
 
     return(
-        <Card className="card" variant="elevated">
+        <Card onClick = {props.onClick} className="card" variant="elevated">
             <div className= "card-header">
                 <h3> {props.title}</h3>
             </div>
@@ -24,21 +29,19 @@ const MyCard = props=>
                 </div> 
             </CardContent>
             <div className="card-points">
-                {"+"+props.points}
+                {props.points?"+"+props.points:''}
             </div>
             <CardActions>
 
             <ButtonGroup variant="contained" color="primary" aria-label="text primary button group">
 
-                <Button size="Large" color="secondary" >
-                Delete
-                </Button>
-                <Button size="Large" color="primary">
+                <Button onClick={props.onDelete} size="medium" color="primary">
                 Edit
                 </Button>
-                <Button size="Large" color="default">
+                <Button size="medium" color="default">
                 Fufill
                 </Button>
+
             </ButtonGroup>
 
       </CardActions>
